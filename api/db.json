@@ -1,0 +1,18 @@
+{
+    "users": [
+        {
+            "id":"1",
+            "name": "Ashton",
+            "surname": "Cox",
+            "position": "Junior Technical Author",
+            "salary": "$86,000"
+          },
+          {
+            "id":"2",
+            "name": "Bradley",
+            "surname": "Greer",
+            "position": "Software Engineer",
+            "salary": "$132,000"
+          }
+    ]
+}

@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.App > h4 {
+  color:#fff;
+}
