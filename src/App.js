@@ -10,14 +10,11 @@ class App extends Component {
   render() {
     return (
       <div className="App container">
-        <Test/>
-        <h4>App Component <img height="35" src={logo} /></h4>
+        <h4>ReactJS Demo<img height="35" src={logo} style={{verticalAlign:'sub'}} /></h4>
           <UserInfo />
         <hr/>
           <AddUser />
-        <hr/>
-           <Users />
-        <hr/>
+          <Users />
       </div>
     )
   }

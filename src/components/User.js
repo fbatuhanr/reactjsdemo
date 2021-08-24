@@ -43,7 +43,7 @@ class User extends Component {
                     value => {
                         const {dispatch} = value;
                         return (
-                            <div className="col-md-8 mb-4">
+                            <div className="col-md-8 offset-md-2 mb-4">
                                 <div className="card" style={isVisible ? {backgroundColor:"#3e3838", color:"#fff"} : null}>
                                     <div className="card-header d-flex">
                                         <h4 

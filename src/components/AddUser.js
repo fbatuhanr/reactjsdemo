@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import uniqid from 'uniqid';
 import UserConsumer from '../context';
 
-
 class AddUser extends Component {
     state = {
-        visibleNow: true,
+        visibleNow: false,
 
         nameInput: "",
         surnameInput: "",
@@ -44,19 +43,32 @@ class AddUser extends Component {
     render() {
 
         const {visibleNow, nameInput, surnameInput, positionInput, salaryInput} = this.state;
+        const animVariants = {
+            visible: {
+              opacity: 1,
+              display: "block",
+            },
+            hidden: {
+              opacity: 0,
+              transitionEnd: {
+                display: "none",
+              },
+            },
+        }
         return <UserConsumer>
             {
                 value => {
                     const {dispatch} = value;
                     return (
-                        <div className="col-md-8 mb-4">
+                        <div>
+                        <div className="col-md-8 offset-md-2 mb-4">
                             <button className="btn btn-dark btn-block mb-1" type="button" onClick={this.changeVisibility} >{visibleNow ? "Hide Form" : "Show Form"}</button>
                           
-                            <motion.div   
-                                animate={{ 
-                                    opacity: visibleNow ? 1 : 0,
-                                    transitionEnd: { display: visibleNow ? "block" : "none" }
-                                }}
+                            <motion.div
+                                initial="hidden"
+                                animate={visibleNow ? "visible" : "hidden"}
+                                transition={{ duration: 1 }}
+                                variants={animVariants}
                             >
                             <div className="card">
                                 <div className="card-header">
@@ -119,6 +131,8 @@ class AddUser extends Component {
                                 </div>
                             </div>
                             </motion.div>
+                        </div>
+                        {visibleNow ? <hr/> : null}
                         </div>
                     )
                 }

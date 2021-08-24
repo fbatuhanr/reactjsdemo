@@ -23,7 +23,7 @@ function UserInfo() {
 */
 
 UserInfo.defaultProps = {
-    title: "Unknown Title"
+    title: "User Add Form Example"
 }
 
 UserInfo.propTypes = {
