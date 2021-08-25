@@ -10,7 +10,7 @@ class User extends Component {
             isVisible: true
         }
 
-        this.onClickEvent = this.onClickEvent.bind(this);
+        this.onHideUser = this.onHideUser.bind(this);
         // this.onDeleteUser = this.onDeleteUser.bind(this);
     }
     // static defaultProps = {
@@ -18,7 +18,7 @@ class User extends Component {
     //     surname: "Bilinmiyor"
     // }
     
-    onClickEvent = (e) => {
+    onHideUser = (e) => {
         this.setState({
             isVisible: !this.state.isVisible
         });
@@ -44,16 +44,16 @@ class User extends Component {
                         const {dispatch} = value;
                         return (
                             <div className="col-md-8 offset-md-2 mb-4">
-                                <div className="card" style={isVisible ? {backgroundColor:"#3e3838", color:"#fff"} : null}>
-                                    <div className="card-header d-flex">
-                                        <h4 
-                                         className="d-inline"
-                                         onClick={this.onClickEvent}
-                                        >
+                                <div className="card" style={isVisible ? {backgroundColor:"#3e3838", color:"#f1f1f1"} : null}>
+                                    <div className="card-header d-flex justify-content-between">
+                                        <h4 className="d-inline">
                                             <i class="fa fa-user" aria-hidden="true"></i> {name} {surname}
                                         </h4>
-                                        <i onClick={this.onDeleteUser.bind(this, dispatch)} class="fa fa-trash-o ml-4" aria-hidden="true" style={{marginLeft: '20px', fontSize: '24px', cursor: 'pointer'}}></i>
-                                      </div>
+                                        <div style={{fontSize: '24px', cursor: 'pointer'}}>
+                                            <i onClick={this.onHideUser} class={"mr-3 fa " + (isVisible ? "fa-eye-slash" : "fa-eye")} aria-hidden="true"></i>
+                                            <i onClick={this.onDeleteUser.bind(this, dispatch)} class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </div>  
+                                    </div>
                                     { isVisible 
                                     ? <div className="card-body d-flex">
                                         <h6 className="d-inline text-left">
@@ -65,6 +65,7 @@ class User extends Component {
                                     : null 
                                     }
                                 </div>
+                                <hr/>
                             </div>
                         )
                     }
