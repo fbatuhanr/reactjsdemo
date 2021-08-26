@@ -1,7 +1,7 @@
 This demo 'React' app is listing users from 'JSON' file also it contains "User Add Form".
-<br/>
+<br/><br/>
 You can 'hide', 'show' or 'delete' any user from list.
-<br/>
+<br/><br/>
 🛠This 'reactjsdemo' project contains react technologies and applications.🛠<br/>
     ✔️-> Props/States - PropTypes, Default Props, Props Drilling.<br/>
     ✔️-> Events.<br/>
