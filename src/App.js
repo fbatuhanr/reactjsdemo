@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import logo from './logo.svg';
 import './App.css';
-import Test from './components/Test'
 import UserInfo from './components/UserInfo';
 import AddUser from './components/AddUser';
 import Users from './components/Users';
