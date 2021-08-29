@@ -7,10 +7,10 @@ class AddUser extends Component {
     state = {
         visibleNow: false,
 
-        nameInput: "",
-        surnameInput: "",
-        positionInput: "",
-        salaryInput: ""
+        name: "",
+        surname: "",
+        position: "",
+        salary: ""
     }
 
     changeVisibility = () => {
@@ -28,21 +28,21 @@ class AddUser extends Component {
     addUser = (dispatch, e) => {
         e.preventDefault();
 
-        const {nameInput, surnameInput, positionInput, salaryInput} = this.state;
+        const {name, surname, position, salary} = this.state;
         const formValues = {
             id:uniqid(),
-            name: nameInput,
-            surname: surnameInput,
-            position: positionInput,
-            salary: salaryInput
-            //nameInput,surnameInput,positionInput,salaryInput
+            name,surname,position,salary
+            // name: name,
+            // surname: surname,
+            // position: position,
+            // salary: salary
         }
         dispatch({type: "ADD_USER", payload: formValues});
     }
 
     render() {
 
-        const {visibleNow, nameInput, surnameInput, positionInput, salaryInput} = this.state;
+        const {visibleNow, name, surname, position, salary} = this.state;
         const animVariants = {
             visible: {
               opacity: 1,
@@ -80,11 +80,11 @@ class AddUser extends Component {
                                             <label htmlFor="name">Name</label>
                                             <input 
                                                 type="text" 
-                                                name="nameInput" 
+                                                name="name" 
                                                 id="name" 
                                                 placeholder="Enter name"
                                                 className="form-control"
-                                                value={nameInput}
+                                                value={name}
                                                 onChange={this.changeInput}
                                             />
                                         </div>
@@ -92,11 +92,11 @@ class AddUser extends Component {
                                             <label htmlFor="surname">Surname</label>
                                             <input 
                                                 type="text" 
-                                                name="surnameInput" 
+                                                name="surname" 
                                                 id="surname" 
                                                 placeholder="Enter surname"
                                                 className="form-control"
-                                                value={surnameInput}
+                                                value={surname}
                                                 onChange={this.changeInput}
                                             />
                                         </div>
@@ -104,11 +104,11 @@ class AddUser extends Component {
                                             <label htmlFor="position">Position</label>
                                             <input 
                                                 type="text" 
-                                                name="positionInput" 
+                                                name="position" 
                                                 id="position" 
                                                 placeholder="Enter position"
                                                 className="form-control"
-                                                value={positionInput}
+                                                value={position}
                                                 onChange={this.changeInput}
                                             />
                                         </div>
@@ -116,11 +116,11 @@ class AddUser extends Component {
                                             <label htmlFor="salary">Salary</label>
                                             <input 
                                                 type="text" 
-                                                name="salaryInput" 
+                                                name="salary" 
                                                 id="salary" 
                                                 placeholder="Enter salary"
                                                 className="form-control"
-                                                value={salaryInput}
+                                                value={salary}
                                                 onChange={this.changeInput}
                                             />
                                         </div>
