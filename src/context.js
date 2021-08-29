@@ -31,11 +31,18 @@ export class UserProvider extends Component {
             this.setState(state => reducer(state, action));
         }
     }
-    componentDidMount = async () => {
-        const response = await axios.get("http://localhost:3004/users");
-        this.setState({
-            users: response.data
+    componentDidMount() {
+
+        axios
+        .get("http://localhost:3004/users")
+        .then(response => {
+            this.setState({
+                users: response.data
+            })
         })
+        .catch(() => {
+            alert("You must start JSON Server at 3004 Port! \r\n(https://github.com/typicode/json-server)");
+        });   
     }
     
     
