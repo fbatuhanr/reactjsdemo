@@ -1,32 +1,25 @@
 {
   "users": [
     {
-      "id": "1",
-      "name": "Ashton",
-      "surname": "Cox",
-      "position": "Computer Engineer",
-      "salary": "$99,000"
+      "id": "ksx1ge55",
+      "name": "Angelica",
+      "surname": "Ramos",
+      "position": "Electrical Engineer",
+      "salary": "$89,000"
     },
     {
-      "id": "2",
+      "id": "ksx1gwym",
       "name": "Bradley",
       "surname": "Greer",
       "position": "Software Engineer",
       "salary": "$110,000"
     },
     {
-      "id": "3",
+      "id": "ksx1hdv9",
       "name": "Airi",
       "surname": "Satou",
       "position": "Accountant",
       "salary": "$75,000"
-    },
-    {
-      "name": "Angelica",
-      "surname": "Ramos",
-      "position": "Electrical Engineer",
-      "salary": "$89,000",
-      "id": "hR6jCES"
     }
   ]
 }
