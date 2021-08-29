@@ -9,3 +9,4 @@ You can 'hide', 'show' or 'delete' any user from list.
     ✔️-> Action, Reducer, Dispatch.<br/>
     ✔️-> React Lifecycle (Mounting, Updating, Unmounting).<br/>
     ✔️-> Framer Motion library.<br/>
+    ✔️-> Axios, JSON Server packages.<br/>
