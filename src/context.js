@@ -8,11 +8,13 @@ const UserContext = React.createContext();
 const reducer = (state, action) => {
     switch (action.type) {
         case "DELETE_USER":
+            axios.delete("http://localhost:3004/users/"+action.payload)
             return {
                 ...state,
                 users: state.users.filter(user => action.payload !== user.id)
             }
         case "ADD_USER":
+            axios.post("http://localhost:3004/users", action.payload)
             return {
                 ...state,
                 users: [...state.users, action.payload]
