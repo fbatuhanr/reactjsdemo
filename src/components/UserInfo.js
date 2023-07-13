@@ -12,16 +12,6 @@ const UserInfo = (props) => (
     </motion.div>
 )
 
-/*
-function UserInfo() {
-    return (
-        <div>
-            
-        </div>
-    )
-}
-*/
-
 UserInfo.defaultProps = {
     title: "User Add Form Example"
 }

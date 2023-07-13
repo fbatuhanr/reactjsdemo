@@ -1,19 +1,18 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": "0",
+      "name": "Batuhan",
+      "surname": "Ozturk",
+      "position": "Software Engineer",
+      "salary": 120000
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": "lk05ltp7",
+      "name": "Michael",
+      "surname": "Jordan",
+      "position": "Professional Athlete",
+      "salary": "86760000"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
